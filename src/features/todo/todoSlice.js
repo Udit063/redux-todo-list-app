@@ -4,7 +4,7 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
-  todos: [],
+  todos: [{ id: 1, text: "Hello", completed: false }],
 };
 
 export const todoSlice = createSlice({
@@ -28,5 +28,7 @@ export const todoSlice = createSlice({
 });
 
 export const { addTodo, removeTodo } = todoSlice.actions;
+// this will help individually for the dispatch
 
 export default todoSlice.reducer;
+// this will store in the store
